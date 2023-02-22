@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Cream);
+    min-height: 100vh;
+    font-size: 1.8rem;
+    justify-content: center;
+
+}
+
+.my-balance {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+    background-color: var(--Soft-red);
+    align-items: center;
+    padding: 50px;
+    border-radius: 35px;
+}
+
+.my-balance>img {
+    width: 110px;
+}
+
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.balance-text {
+    color: var(--Cream);
+}
+
+.balance-number {
+    color: var(--Very-pale-orange);
+    font-weight: 700;
+    font-size: 5.0rem;
+}
