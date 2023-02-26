@@ -1,12 +1,22 @@
 const myBalance = document.querySelector(".balance-number")
 const gastosSemanais = document.querySelectorAll(".bar")
 console.log(gastosSemanais)
-myBalance.innerHTML = "$1000.00"
+let total = 0
+const totalMonth = document.querySelector(".total-spending")
+let balance = 0
+
+
+
+
 fetch("./data.json").then((response) => {
     response.json().then((data) => {
         spendingAMounts = data;
-        spendingAMounts.map((day) => {
-            console.log(day.amount)
+        spendingAMounts.map((spending, index) => {
+            gastosSemanais[index].style.height = `${spending.amount}px`
+            total += spending.amount
+            totalMonth.innerHTML = `$${total.toFixed(2)}`
+            balance = 1000 - total;
+            myBalance.innerHTML = `$${balance.toFixed(2)}`
         })
     });
 });
