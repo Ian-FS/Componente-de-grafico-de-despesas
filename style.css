@@ -62,7 +62,7 @@ body {
 }
 
 .my-balance>img {
-    width: 110px;
+    width: 11.0rem;
 }
 
 .balance-info {
@@ -186,4 +186,54 @@ body {
 
 .text {
     color: var(--Medium-brown);
+}
+
+@media (max-width: 549px) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 517px) {
+    .spending-text {
+        font-size: 3.0rem;
+    }
+}
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .my-balance {
+        padding: 40px;
+    }
+
+    .spending {
+        padding: 40px;
+    }
+
+}
+
+@media (max-width: 410px) {
+    .my-balance {
+        flex-direction: column-reverse;
+        gap: 15px;
+        padding: 30px;
+    }
+
+    .balance-info {
+        text-align: center;
+    }
+
+    .spending {
+        padding: 30px;
+    }
+
+    .spending-text {
+        text-align: center;
+        font-size: 3 rem;
+    }
+
 }
