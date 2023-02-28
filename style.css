@@ -10,6 +10,16 @@
     --Very-pale-orange: hsl(33, 100%, 98%);
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -17,24 +27,33 @@
 
 html {
     font-size: 62.5%;
+
 }
 
 body {
-    font-family: 'DM Sans', sans-serif;
     display: flex;
-    flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
     background-color: var(--Cream);
     min-height: 100vh;
     font-size: 1.8rem;
+    align-items: center;
     justify-content: center;
+}
 
+.container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .my-balance {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 610px;
+    max-width: 610px;
+    width: 90%;
     margin: 15px auto;
     background-color: var(--Soft-red);
     align-items: center;
@@ -65,7 +84,8 @@ body {
 .spending {
     display: flex;
     flex-direction: column;
-    width: 610px;
+    max-width: 610px;
+    width: 90%;
     margin: 15px auto;
     background-color: var(--Very-pale-orange);
     border-radius: 35px;
@@ -78,7 +98,7 @@ body {
 
 .spending-graphic {
     display: grid;
-    grid-template-columns: repeat(7, 70px);
+    grid-template-columns: repeat(7, minmax(20px, 70px));
     grid-template-rows: 97% 3%;
     grid-gap: 20px;
     margin-top: 30px;
