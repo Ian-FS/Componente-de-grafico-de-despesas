@@ -111,6 +111,7 @@ body {
     background-color: var(--Soft-red);
     border-radius: 5px;
     text-align: center;
+    position: relative;
 }
 
 .bar:hover {
@@ -122,32 +123,50 @@ body {
 }
 
 .tue {
-    height: 20%;
+    height: 10%;
 }
 
 .wed {
-    height: 90%;
+    height: 10%;
 }
 
 .thu {
-    height: 45%;
+    height: 10%;
 }
 
 .fri {
-    height: 60%;
+    height: 10%;
 }
 
 .sat {
-    height: 15%;
+    height: 10%;
 }
 
 .sun {
-    height: 20%;
+    height: 10%;
 }
 
 .spending-graphic>p {
     text-align: center;
     color: var(--Medium-brown);
+}
+
+.float-value {
+    display: none;
+    box-sizing: border-box;
+    width: 5.0rem;
+    background-color: var(--Dark-brown);
+    border-radius: 4px;
+    color: var(--Very-pale-orange);
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    position: absolute;
+    top: -2.8rem;
+    left: -2%;
+}
+
+.bar:hover .float-value {
+    display: block;
 }
 
 .line {

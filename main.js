@@ -1,5 +1,6 @@
 const myBalance = document.querySelector(".balance-number")
 const gastosSemanais = document.querySelectorAll(".bar")
+const floatValue = document.querySelectorAll(".float-value")
 console.log(gastosSemanais)
 let total = 0
 const totalMonth = document.querySelector(".total-spending")
@@ -17,6 +18,7 @@ fetch("./data.json").then((response) => {
             totalMonth.innerHTML = `$${total.toFixed(2)}`
             balance = 1000 - total;
             myBalance.innerHTML = `$${balance.toFixed(2)}`
+            floatValue[index].innerHTML = `$${spending.amount}`
         })
     });
 });
