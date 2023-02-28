@@ -116,6 +116,7 @@ body {
 
 .bar:hover {
     background-color: var(--Cyan);
+    transition: 0.2s;
 }
 
 .mon {
@@ -163,6 +164,7 @@ body {
     position: absolute;
     top: -2.8rem;
     left: -2%;
+    font-weight: 700;
 }
 
 .bar:hover .float-value {
